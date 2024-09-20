@@ -1,3 +1,4 @@
+/* Write a C program that accepts a positive integer N, and then it calculates and prints the sum of all numbers from 1 to N except the multiples of 3 */
 #include<stdio.h>
 int main(void){
 int i,N,sum,cnt=0;
