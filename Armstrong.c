@@ -1,9 +1,8 @@
-/*Write a C program that takes a positive integer as a user input and prints whether it is an Armstrong number or not. */
+/*Write a C program that takes a positive integer as a user input and prints whether it is an Armstrong number or not.*/
 #include <stdio.h>
-#include <math.h>
 int main() {
-    int num, originalNum, remainder, n = 0;
-    float result = 0.0;
+    int num, originalNum, remainder, n = 0, power, i;
+    int result = 0;
     printf("Enter the number: ");
     scanf("%d", &num);
     originalNum = num;
@@ -14,10 +13,15 @@ int main() {
     originalNum = num;
     while (originalNum != 0) {
         remainder = originalNum % 10;
-        result += pow(remainder, n);
+        power = 1;
+        for (i = 0; i < n; i++) {
+            power *= remainder;
+        }
+
+        result += power;
         originalNum /= 10;
     }
-    if ((int)result == num) {
+    if (result == num) {
         printf("The number is an Armstrong number.\n");
     } else {
         printf("The number is not an Armstrong number.\n");
