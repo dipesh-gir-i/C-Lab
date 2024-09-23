@@ -6,7 +6,8 @@ int main() {
     scanf("%d %d", &X, &Y);
     if (X > Y) {
         printf("No even numbers are possible\n");
-    } else {
+    } 
+    else {
         printf("The even numbers are: ");
         int foundEven = 0;
         for (i = X; i <= Y; i++) {
@@ -14,11 +15,11 @@ int main() {
             if (i % 2 == 0) {
                 printf("%d ", i);
                 foundEven = 1;
-            }
-        }
+                            }
+                                 }
         if (!foundEven) {
             printf("None");
-        }
+                       }
         printf("\n");
     }
     return 0;
